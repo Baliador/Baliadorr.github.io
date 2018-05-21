@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    	<meta http-equiv="imagetoolbar" content="no" />
+    
+    	<meta name="format-detection" content="telephone=no" />
+    	<meta http-equiv="x-rim-auto-match" content="none" />
+    
+    	<meta name="apple-mobile-web-app-capable" content="yes" />
+    	<meta name="viewport" content=" width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    
+        <meta charset="utf-8" />
+        <title>Rockhits Music - free streaming songs, albums, music videos, top charts from alternative, indie rock, punk to emo, black, trash, nu metal</title>
+ 
+        <meta name="keywords" content="music, music video, albums, lyrics, rock, best, free, artist, playlist, player, genres, moods, hits, charts, songs, tracks, top, metal, alternative, ballads, punk, share, flac, streaming, online, collection" />
+		<meta name="description" content="Rockhits - best way to discover rock songs, albums and music videos for free. Free music streamer. Explore and listen rock songs, albums, genres and moods." />
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="css/resetcss.css" /> 
+        <link rel="stylesheet" href="css/styles.css" />        
+        <link rel="stylesheet" href="css/animate.css" />
+        
+        <!-- favicon -->
+        <link rel="apple-touch-icon" 	type="text/css" 			href="favicon.png" 							/>
+        <link rel="shortcut icon" 		type="image/x-icon"			href="favicon.ico"  	 					/>
+        
+        <!-- fullpage -->
+       	<link rel="stylesheet" 			type="text/css" 			href="/css/jquery.fullPage.css" 			/> 	
+        
+        <script type="text/javascript" src="js/jquery-1.11.2.js"></script> 
+		<script type="text/javascript" src="js/jquery.imagefit.min.js"></script>  
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+        <script type="text/javascript">		
+		$(document).ready(function() {
+					
+			var $winwidth;
+			$('#fullpage').fullpage({				
+				scrollingSpeed: 900,	
+				'verticalCentered': false,
+				'css3': false,			
+	
+				anchors: ['welcome', 'discover', 'genres', 'listen', 'watch', 'share', 'footer'],
+				menu: '#menu',
+									
+				responsive: 900,
+				afterResize: function(){
+					$winwidth = $(window).width();		
+					},
+				'onLeave': function(index, nextIndex, direction){
+					$winwidth = $(window).width();	
+					//$('.mouse-control').animate({backgroundSize:86},100).delay(120).animate({backgroundSize:80},80);
+					$('.mouse-control').animate({opacity:0.7},300).delay(120).animate({opacity:0.6},300);
+					if (nextIndex == 7){
+						$('.mouse-control').css({backgroundPosition:'50% 100%'});
+					}
+					else{
+						$('.mouse-control').css({backgroundPosition:'50% 50%'});
+					}
+					
+					if($winwidth>=900){						
+						new animateOn(index, nextIndex, direction);
+						
+									
+					}// wind width
+					else if($winwidth<900){
+						new animateMobile(index, nextIndex, direction);
+					}
+				
+			}
+
+
+			});
+			
+			
+		});
+	</script>
+    <script type="text/javascript" src="/js/script.js"></script>
+    <script type="text/javascript" src="/js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="/js/animateOn.js"></script>
+    
+	</head>
+
+    
+<body>  
+
+
+<!-- MENU START
+====================================================================================================== -->
+    <div class="main-menu">
+        <nav>
+            <ul class="menu-vis" id="menu">
+                <li class="welcome">
+                	<a class="active" data-menuanchor="welcome" href="#welcome">
+                    	<span>Rock hits</span>
+                    </a>
+                </li>
+                <li class="discover">
+                	<a data-menuanchor="discover" href="#discover">
+                    	<span>Discover</span>
+                    </a>
+                </li>
+                <li class="genres">
+                	<a data-menuanchor="genres" href="#genres">
+                    	<span>Genres</span>
+                    </a>
+                </li>
+                <li class="listen">
+                	<a data-menuanchor="listen" href="#listen">
+                    	<span>Listen</span>
+                    </a>
+                </li>
+                <li class="watch">
+                	<a data-menuanchor="watch" href="#watch">
+                    	<span>Watch</span>
+                    </a>
+                </li>
+                <li class="share">
+                	<a data-menuanchor="share" href="#share">
+                    	<span>Share</span>
+                    </a>
+                </li>
+                <li class="footer">
+                	<a data-menuanchor="footer" href="#footer">
+                    	<span>Get Rockhits for free</span>
+                    </a>
+                </li>
+            </ul>    
+        </nav>
+    </div>
+<!-- MENU END
+====================================================================================================== -->
+ 
+ 	<div id="fullpage">
+    
+<!-- BLOCK 1 MAIN
+______________________________________________________________________________________________ -->
+        <div class="section active" id="rh-info-p1">
+        	<div class="resolution main-info">
+            	<div class="rock-hits-logo align-h animated fadeInDown option-3"></div>
+                <div class="rock-hits-logo-text align-h animated fadeInDown option-4"></div>
+                <div class="rock-hits-slogan align-h animated fadeInDown option-5">
+                	<h1>Best way to discover songs and music videos for free</h1>
+                </div>    
+                <div class="rock-hits-btn-app align-h animated fadeInUp option-6"><a href="#"></a></div>
+
+            </div>
+			<div class="bg-anim">
+            	<img class="opp"  src="img/Layer.png" alt=" " />
+            </div>
+
+            <div class="video_mask">
+            	<video autoplay loop id="myVideo">
+                <source src="video/video2.mp4" type="video/mp4">
+			    </video>
+                <span class="line-center-top"></span>
+            </div>
+        </div><!-- #rh-info-p1 -->
+  
+        
+<!-- BLOCK 2 Discover
+_____________animated zoomInOne option11 _________________________________________________________________________________ -->
+        <div class="section" id="rh-info-p2">
+        	<div class="resolution">
+            	<div class="rock-hits-btn-app app-btn-r"><a href="#"></a></div>
+            	<!-- left block -->
+            	<div class="col-1-2 col-one">
+                	<div class="h2-name">
+                    	<h2>
+                       
+                        </h2>
+                    </div>
+                    <div class="text_l1">                    	
+						Discover new music albums every day. Professional musicians constantly add the best free music to give you unique music experience
+                    </div>
+                    <div class="icons-pack">
+                    	<div class="b1-icns-icn1"><img src="/images/iconspacks/b1-icns-icn1.png" alt=" " /></div>
+                        <div class="b1-icns-icn2"><img src="/images/iconspacks/b1-icns-icn2.png" alt=" " /></div>
+                        <div class="b1-icns-icn3"><img src="/images/iconspacks/b1-icns-icn3.png" alt=" " /></div>
+                        <div class="b1-icns-icn4"><img src="/images/iconspacks/b1-icns-icn4.png" alt=" " /></div>
+                        <div class="b1-icns-icn5"><img src="/images/iconspacks/b1-icns-icn5.png" alt=" " /></div>
+                    </div>
+                    
+                </div>
+                <!-- left block end -->
+                
+                <!-- right block -->
+        		<div class="col-1-2 col-two">
+                	<div class="images-phone-r">
+                    	<div class=""><img src="/images/phones/pic_block1_iphone_@2x.png" alt=" " /></div>                        
+                    </div>  
+                </div> 
+                <!-- right block end -->		
+            </div><!-- resolution -->       
+        </div><!-- #rh-info-p2 -->
+        
+ 
+
+<!-- BLOCK 3 Genres
+______________________________________________________________________________________________ -->        
+        <div class="section" id="rh-info-p3">
+        	<div class="resolution">
+            	<div class="rock-hits-btn-app app-btn-l"><a href="#"></a></div>
+            	<!-- left block -->
+            	<div class="col-1-2 col-two">
+                	<div class="images-phone-l">
+                    	<div><img src="/images/phones/pic_block2_iphone_@2x.png" alt=" " /></div>                       
+                    </div>
+                </div>
+                <!-- left block end -->
+                
+                <!-- right block -->
+        		<div class="col-1-2 col-one padding-left-20">                	
+                    <div class="h2-name">
+                    	<h2>
+                        	
+                        </h2>
+                    </div>
+                    <div class="text_l1">                    	
+						Choose your favorite genres from Alternative <br /> to Black Metal to see only proper music, <br /> that you will definitely like
+
+                    </div> 
+                    <div class="icons-pack">
+                    	<div class="b2-icns-icn1"><img src="/images/iconspacks/b2-icns-icn1.png" alt=" " /></div>
+                        <div class="b2-icns-icn2"><img src="/images/iconspacks/b2-icns-icn2.png" alt=" " /></div>
+                        <div class="b2-icns-icn3"><img src="/images/iconspacks/b2-icns-icn3.png" alt=" " /></div>
+                        <div class="b2-icns-icn4"><img src="/images/iconspacks/b2-icns-icn4.png" alt=" " /></div>
+                        <div class="b2-icns-icn5"><img src="/images/iconspacks/b2-icns-icn5.png" alt=" " /></div>
+                    </div>
+                     
+                </div> 
+                <!-- right block end -->		
+            </div><!-- resolution -->       
+        </div><!-- #rh-info-p2 -->
+        
+<!-- BLOCK 4 Listen
+______________________________________________________________________________________________ -->        
+        <div class="section" id="rh-info-p4">
+        	<div class="resolution">
+            	<div class="rock-hits-btn-app app-btn-r"><a href="#"></a></div>
+            	<!-- left block -->
+            	<div class="col-1-2 col-one">
+                	<div class="h2-name">
+                    	<h2>
+                        	
+                        </h2>
+                    </div>
+                    <div class="text_l1">                    	
+						Listen to hight quality rock songs and 
+                        legendary albums with the help of an 
+                        awesome convenient player  
+                    </div>
+                    <div class="icons-pack">
+                    	<div class="b3-icns-icn1"><img src="/images/iconspacks/b3-icns-icn1.png" alt=" " /></div>
+                        <div class="b3-icns-icn2"><img src="/images/iconspacks/b3-icns-icn2.png" alt=" " /></div>
+                        <div class="b3-icns-icn3"><img src="/images/iconspacks/b3-icns-icn3.png" alt=" " /></div>
+                        <div class="b3-icns-icn4"><img src="/images/iconspacks/b3-icns-icn4.png" alt=" " /></div>
+                        <div class="b3-icns-icn5"><img src="/images/iconspacks/b3-icns-icn5.png" alt=" " /></div>
+                    </div>
+                    
+                </div>
+                <!-- left block end -->
+                
+                <!-- right block -->
+        		<div class="col-1-2 col-two">
+                	<div class="images-phone-r">
+                    	<div class=""><img src="/images/phones/pic_block3_iphone_@2x.png" /></div>                        
+                    </div>  
+                </div> 
+                <!-- right block end -->		
+            </div><!-- resolution -->       
+        </div><!-- #rh-info-p2 -->
+        
+ 
+
+<!-- BLOCK 5 Watch
+______________________________________________________________________________________________ -->        
+        <div class="section" id="rh-info-p5">
+        	<div class="resolution">
+            	<div class="rock-hits-btn-app app-btn-l"><a href="#"></a></div>
+            	<!-- left block -->
+            	<div class="col-1-2 col-two">
+                	<div class="images-phone-l">
+                    	<div><img src="/images/phones/pic_block4_iphone_@2x.png" alt=" " /></div>                       
+                    </div>
+                </div>
+                <!-- left block end -->
+                
+                <!-- right block -->
+        		<div class="col-1-2 col-one padding-left-20">                	
+                    <div class="h2-name">
+                    	<h2>
+                        	
+                        </h2>
+                    </div>
+                    <div class="text_l1">                    	
+						Watch music videos for your favorite songs. <br /> HD quality will give you the best music <br /> experience 
+                    </div> 
+                    <div class="icons-pack">
+                    	<div class="b4-icns-icn1"><img src="/images/iconspacks/b4-icns-icn1.png" alt=" " /></div>
+                        <div class="b4-icns-icn2"><img src="/images/iconspacks/b4-icns-icn2.png" alt=" " /></div>
+                        <div class="b4-icns-icn3"><img src="/images/iconspacks/b4-icns-icn3.png" alt=" " /></div>
+                        <div class="b4-icns-icn4"><img src="/images/iconspacks/b4-icns-icn4.png" alt=" " /></div>
+                        <div class="b4-icns-icn5"><img src="/images/iconspacks/b4-icns-icn5.png" alt=" " /></div>
+                    </div> 
+                    
+                </div> 
+                <!-- right block end -->		
+            </div><!-- resolution -->       
+        </div><!-- #rh-info-p2 -->
+        
+        
+<!-- BLOCK 6 Share
+______________________________________________________________________________________________ -->        
+        <div class="section" id="rh-info-p6">
+        	<div class="resolution">
+            	<div class="rock-hits-btn-app app-btn-r"><a href="#"></a></div>
+            	<!-- left block -->
+            	<div class="col-1-2 col-one">
+                	<div class="h2-name">
+                    	<h2>
+                        	
+                        </h2>
+                    </div>
+                    <div class="text_l1">                    	
+						Share with your friends via Facebook, Twitter, Instagram, Viber or WhatsApp songs, albums and playlists that you like 
+                    </div>
+                    <div class="icons-pack">
+                    	<div class="b5-icns-icn1"><img src="/images/iconspacks/b5-icns-icn1.png" alt=" " /></div>
+                        <div class="b5-icns-icn2"><img src="/images/iconspacks/b5-icns-icn2.png" alt=" " /></div>
+                        <div class="b5-icns-icn3"><img src="/images/iconspacks/b5-icns-icn3.png" alt=" " /></div>
+                        <div class="b5-icns-icn4"><img src="/images/iconspacks/b5-icns-icn4.png" alt=" " /></div>
+                        <div class="b5-icns-icn5"><img src="/images/iconspacks/b5-icns-icn5.png" alt=" " /></div>
+                    </div>
+                    
+                </div>
+                <!-- left block end -->
+                
+                <!-- right block -->
+        		<div class="col-1-2 col-two">
+                	<div class="images-phone-r">
+                    	<div class=""><img src="/images/phones/pic_block5_iphone_@2x.png" alt=" " /></div>                        
+                    </div>  
+                </div> 
+                <!-- right block end -->		
+            </div><!-- resolution -->       
+        </div><!-- #rh-info-p2 -->        
+        
+        
+<!-- BLOCK 7 (FOOTER)
+______________________________________________________________________________________________ -->        
+        <div class="section" id="rh-info-p7">
+        	<div class="resolution footer-block">
+            	<!-- one block -->
+            	<div class="col-1-1">
+                	<div class="h2-name">
+                    	<h2>
+                        	
+                        </h2>
+                    </div>
+                    <div class="text_l1 align-h">                    	
+						Download now Rockhits for free and discover songs and music videos with no limits
+                    </div>
+                    <div class="rock-hits-btn-app align-h"><a href="#"></a></div>                   
+                </div>
+                <!-- one block end -->
+               		
+            </div><!-- resolution -->       
+        </div><!-- #rh-info-p2 -->          
+        
+        
+        
+
+	</div> <!-- #fullpage --> 
+
+
+    
+<div class="mouse-control animated pulse"></div>    
+    
+
+    
+</body>
+</html>
